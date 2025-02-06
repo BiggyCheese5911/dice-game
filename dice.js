@@ -15,19 +15,19 @@ function insertBet(){
 }
 
 function rollDicePlayer1(){
-    rannum = Math.floor(Math.random()*12+1)
+    rannum = Math.floor(Math.random()*1+1)
     console.log(rannum)
     document.getElementById("results1").innerHTML=rannum
 }
 
 function rollDicePlayer2(){
-    rannum1 = Math.floor(Math.random()*12+1)
+    rannum1 = Math.floor(Math.random()*1+1)
     console.log(rannum1)
     document.getElementById("results2").innerHTML=rannum1
 
     if(rannum==rannum1){document.getElementById("results").innerHTML="Its a tie!"
-        points1 += bet
-        points2 += bet
+        points1 += store/2
+        points2 += store/2
     }
 
     if(rannum>rannum1){document.getElementById("results").innerHTML="Player 1 won!"
@@ -40,6 +40,7 @@ else{
     console.log(points2)
 }
 if(rannum==rannum1){document.getElementById("results").innerHTML="Its a tie!"}
+
 display()
 }
 
