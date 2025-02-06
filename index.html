@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Game</title>
+  <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Game</h1>
+    <input type="number" id="bet" placeholder="Insert Bet" name="bet">
+    <button onclick="insertBet()">Submit</button>
+    <p>Please roll dice 1 first</p>
+    <div class="game">
+      <button onclick="rollDicePlayer1()">Player 1 Dice</button>
+      <span id="p1">Money:</span>
+      <span id="points1">0</span>
+      <p id="results1">0</p>
+
+      <button onclick="rollDicePlayer2()">Player 2 Dice</button>
+      <span id="p2">Money:</span>
+      <span id="points2">0</span>
+      <p id="results2">0</p>
+    </div>
+    <p id="results">Results</p>
+
+    <button onclick="resetGame()">Roll Again!</button>
+
+    <p id="score"></p>
+  </div>
+  <script src="dice.js"></script>
+</body>
+</html>
