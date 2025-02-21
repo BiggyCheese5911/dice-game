@@ -44,11 +44,25 @@ function rollDicePlayer2(){
 display()
 }
 
-function resetGame(){
+function resetSpin(){
     rannum=0
     rannum1=0
     document.getElementById("results1").innerHTML=rannum
     document.getElementById("results2").innerHTML=rannum1
+    document.getElementById("results").innerHTML="Winner?"
+}
+
+function resetGame(){
+    rannum=0
+    rannum1=0
+    points1=100
+    points2=100
+    bet=0
+    store=0
+    document.getElementById("results1").innerHTML=rannum
+    document.getElementById("results2").innerHTML=rannum1
+    document.getElementById("points1").innerHTML=points1
+    document.getElementById("points2").innerHTML=points2
     document.getElementById("results").innerHTML="Results"
 }
 

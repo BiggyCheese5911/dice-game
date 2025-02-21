@@ -16,18 +16,19 @@
       <button onclick="rollDicePlayer1()">Player 1 Dice</button>
       <span id="p1">Money:</span>
       <span id="points1">0</span>
-      <p id="results1">0</p>
+      <p>Result: <span id="results1">0</span></p>
 
       <button onclick="rollDicePlayer2()">Player 2 Dice</button>
       <span id="p2">Money:</span>
       <span id="points2">0</span>
-      <p id="results2">0</p>
-    </div>
-    <p id="results">Results</p>
+      <p>Result: <span id="results2">0</span></p>
+    
+  </div>
+    <p id="results">Winner?</p>
+    <button onclick="resetSpin()">Roll Again!</button>
+    <br>
+    <button onclick="resetGame()">Reset Game?</button>
 
-    <button onclick="resetGame()">Roll Again!</button>
-
-    <p id="score">Results</p>
   </div>
   <script src="dice.js"></script>
 </body>
