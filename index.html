@@ -7,29 +7,35 @@
   <link rel="stylesheet" href="dice.css">
 </head>
 <body>
+  <!-- <audio src="jazz-music-casino-poker-roulette-las-vegas-background-intro-theme-287498.mp3" id="csound"></audio> -->
   <div class="container">
     <h1>Dice Game</h1>
+    <p>Instructions: In this game, you and another person will roll die to earn money. First, decide who will be dice 1 and dice 2. Then, insert the amount you would like to bet. You will then roll dice 1, then dice 2. The person who rolls the biggest number wins. The winner will recieve the amount bet multiplied by 2. You can then reset the die if you'd like using the "Reset Die" button. Repeat these steps until someone runs out of money.</p>
     <input type="number" id="bet" placeholder="Insert Bet" name="bet">
     <button onclick="insertBet()">Submit</button>
-    <p>Please roll dice 1 first, don't forget to submit bet after every roll!</p>
     <div class="game">
-      <button onclick="rollDicePlayer1()">Player 1 Dice</button>
+      <button onclick="rollDicePlayer1()">Roll Dice 1</button>
       <span id="p1">Money:</span>
       <span id="points1">0</span>
       <p>Result: <span id="results1">0</span></p>
 
-      <button onclick="rollDicePlayer2()">Player 2 Dice</button>
+      <button onclick="rollDicePlayer2()">Roll Dice 2</button>
       <span id="p2">Money:</span>
       <span id="points2">0</span>
       <p>Result: <span id="results2">0</span></p>
     
   </div>
     <p id="results">Winner?</p>
-    <button onclick="resetSpin()">Roll Again!</button>
+    <button onclick="resetSpin()">Reset Die?</button>
     <br>
     <button onclick="resetGame()">Reset Game?</button>
-
+    <br>
+    <p>Background Music:</p><span><audio controls autoplay muted loop>
+      <source src="jazz-music-casino-poker-roulette-las-vegas-background-intro-theme-287498.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio></span>
   </div>
+  <!-- <audio src="cash-register-kaching-sound-effect-125042.mp3" id="crsound"></audio> -->
   <script src="dice.js"></script>
 </body>
 </html>

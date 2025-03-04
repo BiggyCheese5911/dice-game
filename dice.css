@@ -1,12 +1,16 @@
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: grey;
+  /* background: grey; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   color: white;
+  background-image: url(casino-1761502_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(6px);
 }
 
 .container {
@@ -37,21 +41,27 @@ input[type="number"] {
 
 button {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  border: 3px solid white;
+  border: 3px solid rgba(123,142,182,255);
   padding: 10px 15px;
   margin-top: 10px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  background-color: goldenrod;
+  background-color: rgba(189,94,90,255);
   color: white;
   transition-property: all;
   transition-duration: 0.5s;
 }
 
 button:hover {
-  border-color: goldenrod;
-  background-color: white;
-  color: goldenrod;
+  border-color: rgba(189,94,90,255);
+  background-color: rgba(123,142,182,255);
+  color: white;
   padding: 17px;
+}
+
+@media screen and (max-width: 760px) {
+  audio{
+    display: none;
+  }
 }
