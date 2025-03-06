@@ -11,22 +11,24 @@
   <div class="container">
     <h1>Dice Game</h1>
     <p>Instructions: In this game, you and another person will roll die to earn money. First, decide who will be dice 1 and dice 2. Then, insert the amount you would like to bet. You will then roll dice 1, then dice 2. The person who rolls the biggest number wins. The winner will recieve the amount bet multiplied by 2. You can then reset the die if you'd like using the "Reset Die" button. Repeat these steps until someone runs out of money.</p>
-    <input type="number" id="bet" placeholder="Insert Bet" name="bet">
-    <button onclick="insertBet()">Submit</button>
+    <!-- <input type="number" id="bet" placeholder="Insert Bet" name="bet">
+    <button onclick="insertBet()">Submit</button> -->
     <div class="game">
-      <button onclick="rollDicePlayer1()">Roll Dice 1</button>
-      <span id="p1">Money:</span>
-      <span id="points1">0</span>
+      <button onclick="rollDicePlayer1()" id="roll">Roll Die</button>
+      <p>Player 1</p>
+      <p id="p1">Money: <span id="points1">100</span></p>
       <p>Result: <span id="results1">0</span></p>
 
-      <button onclick="rollDicePlayer2()">Roll Dice 2</button>
-      <span id="p2">Money:</span>
-      <span id="points2">0</span>
+      <hr>
+
+      <!-- <button onclick="rollDicePlayer2()">Roll Dice 2</button> -->
+       <p>Player 2</p>
+      <p id="p2">Money: <span id="points2">100</span></p>
       <p>Result: <span id="results2">0</span></p>
     
   </div>
     <p id="results">Winner?</p>
-    <button onclick="resetSpin()">Reset Die?</button>
+    <!-- <button onclick="resetSpin()">Reset Die?</button> -->
     <br>
     <button onclick="resetGame()">Reset Game?</button>
     <br>
