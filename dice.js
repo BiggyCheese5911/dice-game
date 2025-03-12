@@ -3,9 +3,10 @@ let rannum1=0
 points1=100
 points2=100
 let store = 10
+
 // let crsound = document.getElementById('crsound');
 // let crsound = new Audio("cash-register-kaching-sound-effect-125042.mp3")
-    let vbsound = new Audio("audio.mp3")
+    // let vbsound = new Audio("audio.mp3")
     let dsound = new Audio("rolling-dice-2-102706.mp3")
 // let csound = new Audio("jazz-music-casino-poker-roulette-las-vegas-background-intro-theme-287498.mp3")
 // let csound = document.getElementById("csound")
@@ -30,9 +31,13 @@ function rollDicePlayer1(){
     interval = setInterval(function (){
         rannum = Math.floor(Math.random()*10+2)
         document.getElementById("results1").innerHTML = rannum;
+        document.getElementById("roll").setAttribute("disabled", true)
         console.log(rannum)
         count += 50
-        if(count >= 500){clearInterval(interval)}
+        if(count >= 500){
+            clearInterval(interval)
+            document.getElementById("roll").removeAttribute("disabled");
+        }
     }, 50);
 
     // dice 2
@@ -78,7 +83,7 @@ function rollDicePlayer1(){
                 document.getElementById('roll').style.display = "none"
             }
 
-            vbsound.play()
+            // vbsound.play()
 
             display()
             
@@ -118,10 +123,57 @@ function resetGame(){
     document.getElementById("points2").innerHTML=points2
     document.getElementById("results").innerHTML="Results"
     document.getElementById('roll').style.display = "block"
-    document.getElementById('roll').style.alignSelf = "center"
+    document.getElementById('roll').style.margin = 'auto'
 }
 
 function display(){
     document.getElementById("points1").innerHTML=points1
     document.getElementById("points2").innerHTML=points2
 }
+
+
+// // set timeout and clear timeout example
+
+// let countdownValue = 5;
+// let countdownTimerId = null
+
+// // function to update the countdown display
+// function updateCountdown(){
+//     document.getElementById('timeout-display').textContent = `Countdown: ${countdownValue}`
+// }
+
+// // function to handle the countdown logic
+// function countdown(){
+//     countdownValue--;
+//     updateCountdown();
+
+//     if(countdownValue > 0){
+//         // if not at zero yet, schedule the next countdown step
+//         countdownTimerId = setTimeout(countdown, 1000);
+//     }else{
+//         // when we reach zero, show a message   
+//         document.getElementById('timeout-display').textContent = 'Countdown: Complete!';
+//         countdownTimerId = null;
+//     }
+// }
+
+// // set up event listeners for the countdown buttons
+// document.getElementById('start-timeout').addEventListener('click', function(){
+//     // only start if not already counting down
+//     if(countdownTimerId === null){
+//         countdownValue = 5;
+//         updateCountdown();
+//         countdownTimerId = setTimeout(countdown, 1000)
+//     }
+// });
+
+// document.getElementById('cancel-timeout').addEventListener('click',
+//     function() {
+//                 // Only cancel if a countdown is in progress
+//                 if (countdownTimerId !== null) {
+//                 clearTimeout(countdownTimerId);
+//                 countdownTimerId = null;
+//                 document.getElementById('timeout-display').textContent =
+//     'Countdown: Canceled!';
+//                 }
+//             });
