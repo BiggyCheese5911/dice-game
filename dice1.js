@@ -25,7 +25,10 @@ display()
 //     // display()
 // }
 
+const rollDice=document.getElementById('roll')
 
+
+rollDice.addEventListener('click', rollDicePlayer1);
 
 function rollDicePlayer1(){
     // dice 1
@@ -48,7 +51,6 @@ function rollDicePlayer1(){
     let count1 = 0
     
     interval1 = setInterval(function (){
-        
         rannum1 = Math.floor(Math.random()*10+2)
         document.getElementById("results2").innerHTML = rannum1;
         console.log(rannum1)
@@ -90,54 +92,41 @@ function rollDicePlayer1(){
             // vbsound.play()
 
             display()
+          
 
             clearInterval(interval1)
 
         }
         
     }, 50)
+    
 
+}
+
+function countDown(){
     interval2 = setInterval(()=>{
         console.log(time)
-        //let time1=time;
         time--
-        if (time>0){
-            console.log("Decremented time", time)
         document.getElementById('time').innerHTML = time
-        if(time == 0)
-            
-        {
+        if(time == 0){
             clearInterval(interval2)
             if(points1>points2){
                 document.getElementById('results').innerHTML = "Game over, Player 1 wins! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
-
+    
             if(points2>points1){
                 document.getElementById('results').innerHTML = "Game over, Player 2 wins! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
-
+    
             if(points1==points2){
                 document.getElementById('results').innerHTML = "Game over, it's a draw! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
-        } // end of if condition
-
-        
-        }// end of outer if  time >0
+        }
     }, 1000)
-    
 }
-
-
-
-
-// function rollDicePlayer2(){
-    
-
-// }
-
 
 
 display()

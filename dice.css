@@ -65,3 +65,12 @@ button:hover {
     display: none;
   }
 }
+
+#int{
+  font-size: 20px;
+  color: rgb(255, 70, 70);
+}
+
+#timeout-display{
+  margin-top: 10px;
+}

@@ -9,12 +9,13 @@
 <body>
   <!-- <audio src="jazz-music-casino-poker-roulette-las-vegas-background-intro-theme-287498.mp3" id="csound"></audio> -->
   <div class="container">
-    <h1>Dice Game</h1>
-    <p>Instructions: In this game, you and another person will roll die to earn money. First, decide who will be dice 1 and dice 2. Then, insert the amount you would like to bet. You will then roll dice 1, then dice 2. The person who rolls the biggest number wins. The winner will recieve the amount bet multiplied by 2. You can then reset the die if you'd like using the "Reset Die" button. Repeat these steps until someone runs out of money.</p>
+    <h1><b style = "color: rgba(123,142,182,255)">Dice</b> <b style="color: rgba(189,94,90,255);">Game</b></h1>
+    <p><span id="int">Instructions:</span> In this game, you and another person will roll die to earn money. First, decide who will be dice 1 and dice 2. You will then roll the die, a countdown will start when you do so. The person who rolls the biggest number wins. The winner will recieve $10. Whoever has the most money when the timer ends is the winner.</p>
     <!-- <input type="number" id="bet" placeholder="Insert Bet" name="bet">
     <button onclick="insertBet()">Submit</button> -->
     <div class="game">
       <button onclick="rollDicePlayer1()" id="roll">Roll Die</button>
+      <div id="timeout-display">Countdown: <span id="time">15</span></div>
       <p>Player 1</p>
       <p id="p1">Money: <span id="points1">100</span> Dollar Dollar</p>
       <p>Result: <span id="results1">0</span></p>
