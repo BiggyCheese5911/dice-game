@@ -4,6 +4,7 @@ points1=100
 points2=100
 let store = 10
 let time = 15
+let end = false
 
 // let crsound = document.getElementById('crsound');
 // let crsound = new Audio("cash-register-kaching-sound-effect-125042.mp3")
@@ -96,39 +97,43 @@ function rollDicePlayer1(){
         }
         
     }, 50)
+    
+    end = true
+}
 
-    interval2 = setInterval(()=>{
+if(end = true){
+    function int(){interval2 = setInterval(()=>{
         console.log(time)
         //let time1=time;
         time--
-        if (time>0){
-            console.log("Decremented time", time)
         document.getElementById('time').innerHTML = time
         if(time == 0)
-            
         {
+            end = false
             clearInterval(interval2)
             if(points1>points2){
                 document.getElementById('results').innerHTML = "Game over, Player 1 wins! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
-
+    
             if(points2>points1){
                 document.getElementById('results').innerHTML = "Game over, Player 2 wins! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
-
+    
             if(points1==points2){
                 document.getElementById('results').innerHTML = "Game over, it's a draw! Reset Game to play again!"
                 document.getElementById('roll').style.display = "none"
             }
         } // end of if condition
-
+    
         
         }// end of outer if  time >0
-    }, 1000)
-    
+    , 1000)
+    }
 }
+
+
 
 
 
@@ -166,6 +171,7 @@ function resetGame(){
     document.getElementById('roll').style.display = "block"
     document.getElementById('roll').style.margin = 'auto'
     document.getElementById('time').innerHTML = time
+    end = false
 }
 
 function display(){
